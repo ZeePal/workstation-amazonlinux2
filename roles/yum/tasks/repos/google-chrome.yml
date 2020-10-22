@@ -6,6 +6,7 @@
 - name: Install the Google Chrome yum repository
   yum_repository:
     name: google-chrome
+    description: Google Chromes Repo
     baseurl: 'http://dl.google.com/linux/chrome/rpm/stable/$basearch'
     gpgcheck: yes
     gpgkey: https://dl.google.com/linux/linux_signing_key.pub
