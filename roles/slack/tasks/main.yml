@@ -12,6 +12,6 @@
     gpgkey: https://packagecloud.io/slacktechnologies/slack/gpgkey
 
 - name: Install Slack
-  yum:
+  dnf:
     state: present
     name: slack

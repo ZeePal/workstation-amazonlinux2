@@ -1,4 +1,4 @@
 - name: Install the Yum copr repository plugin
-  yum:
+  dnf:
     state: present
     name: yum-plugin-copr
