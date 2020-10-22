@@ -1,7 +1,7 @@
 - name: Install the Google Chrome yum repository key
   rpm_key:
     state: present
-    url: https://dl.google.com/linux/linux_signing_key.pub
+    key: https://dl.google.com/linux/linux_signing_key.pub
 
 - name: Install the Google Chrome yum repository
   yum_repository:

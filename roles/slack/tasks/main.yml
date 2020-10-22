@@ -1,7 +1,7 @@
 - name: Install the Slack yum repository key
   rpm_key:
     state: present
-    url: https://packagecloud.io/slacktechnologies/slack/gpgkey
+    key: https://packagecloud.io/slacktechnologies/slack/gpgkey
 
 - name: Install the Slack yum repository
   yum_repository:
