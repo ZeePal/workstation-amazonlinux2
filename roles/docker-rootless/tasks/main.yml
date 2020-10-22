@@ -23,12 +23,12 @@
         - rootless
 
     - name: Extract Docker
+      become: true
+      become_user: "{{ primary_username }}"
       unarchive:
         src: "{{ docker['storage']['archives'] }}/{{ item }}.tgz"
         dest: "{{ docker['storage']['binarys'] }}/"
         extra_opts: '--strip-components=1'
-        owner: "{{ primary_username }}"
-        group: "{{ primary_username }}"
       with_items:
         - docker
         - rootless
