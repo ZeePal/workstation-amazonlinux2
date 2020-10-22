@@ -21,7 +21,7 @@
       - sysstat
       - zip
       - unzip
-      - vim-enchanced
+      - vim-enhanced
       - rsync
       - atom
       - gnupg2
