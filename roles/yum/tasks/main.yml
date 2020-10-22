@@ -1,7 +1,7 @@
 - include: repos/main.yml
 
 - name: Install yum packages
-  dnf:
+  yum:
     state: present
     name:
       - curl
