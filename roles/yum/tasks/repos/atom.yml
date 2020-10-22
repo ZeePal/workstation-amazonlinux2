@@ -5,7 +5,7 @@
 
 - name: Install the Atom yum repository
   yum_repository:
-    name: Atom Editor
+    name: atom
     description: Atoms Repo
     baseurl: 'https://packagecloud.io/AtomEditor/atom/el/7/$basearch'
     gpgcheck: no
