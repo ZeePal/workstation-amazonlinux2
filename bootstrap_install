@@ -2,12 +2,12 @@
 set -euo pipefail
 
 GIT_FOLDER=~/git
-REPO=https://github.com/ZeePal/workstation-ubuntu.git
+REPO=https://github.com/ZeePal/workstation-amazonlinux2.git
 REPO_NAME="$(basename -s .git "$REPO")"
 
 
-sudo apt update
-sudo apt install -y ansible git
+sudo yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+sudo yum install -y ansible git
 
 if [[ ! -e $GIT_FOLDER ]]; then
   mkdir -p "$GIT_FOLDER"

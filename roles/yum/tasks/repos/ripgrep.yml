@@ -1,0 +1,2 @@
+- name: Install the Ripgrep yum repository
+  command: yum copr -y enable carlwgeorge/ripgrep

@@ -1,0 +1,2 @@
+- name: Install the Tilix yum repository
+  command: yum copr -y enable ivoarch/Tilix

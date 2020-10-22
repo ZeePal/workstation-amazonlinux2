@@ -1,0 +1,7 @@
+- include: epel.yml
+- include: copr.yml
+
+- include: google-chrome.yml
+- include: atom.yml
+- include: tilix.yml
+- include: ripgrep.yml

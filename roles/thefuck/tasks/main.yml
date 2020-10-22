@@ -1,3 +1,9 @@
+- name: Install thefuck
+  pip:
+    state: present
+    executable: pip3
+    name: thefuck
+
 - name: Setup TheFuck
   blockinfile:
     dest: "/home/{{ primary_username }}/.bashrc"

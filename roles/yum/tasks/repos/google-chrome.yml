@@ -1,0 +1,11 @@
+- name: Install the Google Chrome yum repository key
+  yum_key:
+    state: present
+    url: https://dl.google.com/linux/linux_signing_key.pub
+
+- name: Install the Google Chrome yum repository
+  yum_repository:
+    name: google-chrome
+    baseurl: 'http://dl.google.com/linux/chrome/rpm/stable/$basearch'
+    gpgcheck: yes
+    gpgkey: https://dl.google.com/linux/linux_signing_key.pub

@@ -1,5 +1,17 @@
+- name: Install the Slack yum repository key
+  yum_key:
+    state: present
+    url: https://packagecloud.io/slacktechnologies/slack/gpgkey
+
+- name: Install the Slack yum repository
+  yum_repository:
+    name: Slack
+    baseurl: 'https://packagecloud.io/slacktechnologies/slack/el/7/$basearch'
+    gpgcheck: no
+    repo_gpgcheck: yes
+    gpgkey: https://packagecloud.io/slacktechnologies/slack/gpgkey
+
 - name: Install Slack
-  snap:
+  yum:
     state: present
     name: slack
-    classic: true

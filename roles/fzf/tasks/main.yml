@@ -1,3 +1,21 @@
+- name: Checking if fzf is installed
+  stat:
+    path: "/home/{{ primary_username }}/.fzf"
+  register: fzf_folder
+
+- name: Install fzf
+  when: fzf_folder.stat.exists == False
+  block:
+    - name: Download fzf
+      become: true
+      become_user: "{{ primary_username }}"
+      command: git clone --depth 1 https://github.com/junegunn/fzf.git "/home/{{ primary_username }}/.fzf"
+
+    - name: Run Installer for fzf
+      become: true
+      become_user: "{{ primary_username }}"
+      command: "/home/{{ primary_username }}/.fzf/install"
+
 - name: Setup fzf
   blockinfile:
     dest: "/home/{{ primary_username }}/.bashrc"

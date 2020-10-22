@@ -1,0 +1,43 @@
+- include: repos/main.yml
+
+- name: Install yum packages
+  yum:
+    state: present
+    name:
+      - curl
+      - wget
+      - ansible
+      - ansible-lint
+      - python37
+      - python3-setuptools
+      - jq
+      - google-chrome-stable
+      - git
+      - meld
+      - python3-pip
+      - ShellCheck
+      - tilix
+      - pwgen
+      - sysstat
+      - zip
+      - unzip
+      - vim-enchanced
+      - rsync
+      - atom
+      - gnupg2
+      - dconf-editor
+      - gparted
+      - gimp
+      - pigz
+      - iotop
+      - iftop
+      - graphviz
+      - dos2unix
+      - whois
+      - remmina
+      - ripgrep
+      - htop
+      - traceroute
+      - oathtool
+      - net-tools
+      - pv

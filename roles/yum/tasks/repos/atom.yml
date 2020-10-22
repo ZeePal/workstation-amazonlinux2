@@ -1,0 +1,12 @@
+- name: Install the Atom yum repository key
+  yum_key:
+    state: present
+    url: https://packagecloud.io/AtomEditor/atom/gpgkey
+
+- name: Install the Atom yum repository
+  yum_repository:
+    name: Atom Editor
+    baseurl: 'https://packagecloud.io/AtomEditor/atom/el/7/$basearch'
+    gpgcheck: no
+    repo_gpgcheck: yes
+    gpgkey: https://packagecloud.io/AtomEditor/atom/gpgkey
