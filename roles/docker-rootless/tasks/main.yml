@@ -24,7 +24,7 @@
 
     - name: Extract Docker
       become: true
-      become_user: "{{ primary_username }}"
+      become_user: "{{ primary_username | regex_replace('\\', '\\\\') }}"
       unarchive:
         src: "{{ docker['storage']['archives'] }}/{{ item }}.tgz"
         dest: "{{ docker['storage']['binarys'] }}/"
