@@ -1,5 +1,5 @@
 - name: Install the Atom yum repository key
-  yum_key:
+  rpm_key:
     state: present
     url: https://packagecloud.io/AtomEditor/atom/gpgkey
 
