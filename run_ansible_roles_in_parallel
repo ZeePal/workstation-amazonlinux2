@@ -184,7 +184,6 @@ def start_ansible(role, primary_username, check=False):
             "-m include_role",
             f"-a name={safe_role}",
             f"-e primary_username={safe_primary_username}",
-            "-e ansible_python_interpreter=/usr/bin/python3",
             # Add output prefix's
             "2>&1|awk -W interactive",
             f"-v role={safe_role}",
