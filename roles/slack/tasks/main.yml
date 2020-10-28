@@ -6,6 +6,7 @@
 - name: Install the Slack yum repository
   yum_repository:
     name: Slack
+    description: Slack Repo
     baseurl: 'https://packagecloud.io/slacktechnologies/slack/el/7/$basearch'
     gpgcheck: no
     repo_gpgcheck: yes
