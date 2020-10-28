@@ -36,6 +36,7 @@
       - dos2unix
       - whois
       - remmina
+      - openssl-devel
       - ripgrep
       - htop
       - traceroute
