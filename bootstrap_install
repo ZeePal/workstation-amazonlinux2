@@ -16,4 +16,8 @@ cd "$GIT_FOLDER"
 git clone "$REPO"
 
 cd "$REPO_NAME"
+
+# Patch to fix usernames with backslashs not being quoted by ansible
+sudo patch --forward /usr/lib/python2.7/site-packages/ansible/plugins/become/su.py < ansible_become_su.py.patch
+
 exec ./install

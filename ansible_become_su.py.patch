@@ -1,0 +1,8 @@
+--- /usr/lib/python2.7/site-packages/ansible/plugins/become/su.py	2020-10-06 09:43:08.000000000 +1100
++++ /usr/lib/python2.7/site-packages/ansible/plugins/become/su.py	2020-10-28 13:39:47.365241532 +1100
+@@ -155,4 +155,4 @@
+         user = self.get_option('become_user') or ''
+         success_cmd = self._build_success_command(cmd, shell)
+ 
+-        return "%s %s %s -c %s" % (exe, flags, user, shlex_quote(success_cmd))
++        return "%s %s %s -c %s" % (exe, flags, shlex_quote(user), shlex_quote(success_cmd))
