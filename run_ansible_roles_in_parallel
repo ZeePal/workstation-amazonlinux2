@@ -184,6 +184,7 @@ def start_ansible(role, primary_username, check=False):
             "-m include_role",
             f"-a name={safe_role}",
             f"-e primary_username={safe_primary_username}",
+            "--become-method=su",  # sudo to directory user failing
             # Add output prefix's
             "2>&1|awk -W interactive",
             f"-v role={safe_role}",
