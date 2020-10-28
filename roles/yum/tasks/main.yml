@@ -16,6 +16,7 @@
       - git
       - meld
       - python3-pip
+      - python2-pip
       - ShellCheck
       - tilix
       - pwgen

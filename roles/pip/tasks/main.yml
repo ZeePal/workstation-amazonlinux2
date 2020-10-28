@@ -23,3 +23,11 @@
       - beautysh
       - pwntools
       - inotify
+
+- name: Install pip2 packages
+  pip:
+    state: present
+    executable: pip2
+    name:
+      - cson
+      - psutil
