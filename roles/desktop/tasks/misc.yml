@@ -1,2 +1,7 @@
 - name: Set chrome as default browser
   command: xdg-settings set default-web-browser google-chrome.desktop
+
+- name: Set tilix as default terminal
+  dconf:
+    key: /org/mate/desktop/applications/terminal/exec
+    value: tilix

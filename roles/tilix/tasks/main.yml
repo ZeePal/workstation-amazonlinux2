@@ -36,8 +36,3 @@
   dconf:
     key: /org/gnome/desktop/wm/keybindings/show-desktop
     value: "['<Primary><Super>d', '<Super>d']"
-
-- name: Set Tilix as default Terminal
-  alternatives:
-    name: x-terminal-emulator
-    path: /usr/bin/tilix.wrapper

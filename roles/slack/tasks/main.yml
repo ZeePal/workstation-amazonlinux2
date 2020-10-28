@@ -7,7 +7,7 @@
   yum_repository:
     name: Slack
     description: Slack Repo
-    baseurl: 'https://packagecloud.io/slacktechnologies/slack/el/7/$basearch'
+    baseurl: 'https://packagecloud.io/slacktechnologies/slack/fedora/21/$basearch'
     gpgcheck: no
     repo_gpgcheck: yes
     gpgkey: https://packagecloud.io/slacktechnologies/slack/gpgkey
