@@ -14,7 +14,7 @@
     - name: Run Installer for fzf
       become: true
       become_user: "{{ primary_username }}"
-      command: "/home/{{ primary_username }}/.fzf/install"
+      command: '"/home/{{ primary_username }}/.fzf/install"'
 
 - name: Setup fzf
   blockinfile:
