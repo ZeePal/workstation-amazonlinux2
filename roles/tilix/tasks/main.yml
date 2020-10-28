@@ -1,22 +1,3 @@
-- name: Symlink vte
-  file:
-    state: link
-    path: /etc/profile.d/vte.sh
-    src: /etc/profile.d/vte-2.91.sh
-    owner: root
-    group: root
-    mode: u=rwx,go=rx
-
-- name: Setup vte for Tilix
-  blockinfile:
-    path: "/home/{{ primary_username }}/.bashrc"
-    insertbefore: "# BEGIN Eternal Bash History"
-    marker: "# {mark} Tilix Config"
-    block: |
-      if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
-        source /etc/profile.d/vte.sh
-      fi
-
 - name: Configure Tilix
   become: true
   become_user: "{{ primary_username }}"
