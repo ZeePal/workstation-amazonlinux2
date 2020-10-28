@@ -64,7 +64,7 @@ def main():
 
     try:
         data = load_cson(module.params["file"])
-    except FileNotFoundError as e:
+    except IOError as e:
         if not module.params["create"]:
             raise e
         data = {}
