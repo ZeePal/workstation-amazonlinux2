@@ -10,6 +10,7 @@
       - ansible-lint
       - python3
       - python3-setuptools
+      - python3-dev
       - jq
       - google-chrome-stable
       - git
