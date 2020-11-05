@@ -41,20 +41,29 @@
     block: |
       export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/docker.sock
 
-- name: Create Docker systemd folders
+- name: Create autostart folder
   file:
    state: directory
-   path: "/home/{{ primary_username }}/.config/systemd/user"
+   path: "/home/{{ primary_username }}/.config/autostart"
    owner: "{{ primary_username }}"
    group: "{{ primary_username }}"
 
-- name: Configure the Docker systemd service
-  template:
-    src: "{{ role_path }}/files/docker.service.j2"
-    dest: "/home/{{ primary_username }}/.config/systemd/user/docker.service"
+- name: Configure docker-rootless to autostart
+  copy:
+    dest: "/home/{{ primary_username }}/.config/autostart/dockerd-rootless.sh.desktop"
     owner: "{{ primary_username }}"
     group: "{{ primary_username }}"
-    mode: u=rwx,go=rx
+    mode: u=rwx,g=rx,o=
+    content: |
+      [Desktop Entry]
+      Type=Application
+      Exec=dockerd-rootless.sh --experimental --storage-driver vfs
+      NoDisplay=true
+      X-MATE-Autostart-enabled=true
+      Name[en_US]=docker-rootless
+      Name=docker-rootless
+      Comment[en_US]=
+      Comment=
 
 - name: Start Docker service
   become: true
