@@ -64,13 +64,3 @@
       Name=docker-rootless
       Comment[en_US]=
       Comment=
-
-- name: Start Docker service
-  become: true
-  become_user: "{{ primary_username }}"
-  systemd:
-    scope: user
-    name: docker
-    state: started
-    enabled: yes
-    daemon_reload: yes
