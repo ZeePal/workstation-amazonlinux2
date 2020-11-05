@@ -4,4 +4,4 @@
 - name: Set tilix as default terminal
   dconf:
     key: /org/mate/desktop/applications/terminal/exec
-    value: tilix
+    value: "'tilix'"
