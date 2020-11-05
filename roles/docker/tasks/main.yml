@@ -1,0 +1,8 @@
+- name: Install the docker
+  command: amazon-linux-extras install docker
+
+- name: Start Docker service
+  systemd:
+    name: docker
+    state: started
+    enabled: yes
