@@ -5,3 +5,8 @@
   dconf:
     key: /org/mate/desktop/applications/terminal/exec
     value: "'tilix'"
+
+- name: Move panel to top
+  dconf:
+    key: /org/mate/panel/toplevels/bottom/orientation
+    value: "'top'"
