@@ -10,3 +10,39 @@
   dconf:
     key: /org/mate/panel/toplevels/bottom/orientation
     value: "'top'"
+
+
+- name: Dark Theme 1
+  dconf:
+    key: /org/mate/macro/general/theme
+    value: "'Arc-Dark'"
+- name: Dark Theme 2
+  dconf:
+    key: /org/mate/desktop/interface/gtk-theme
+    value: "'Arc-Dark'"
+- name: Dark Theme 3
+  dconf:
+    key: /org/mate/desktop/interface/icon-theme
+    value: "'gnome'"
+
+
+- name: Background 1
+  dconf:
+    key: /org/mate/desktop/background/color-shading-type
+    value: "'vertical-gradient'"
+- name: Background 2
+  dconf:
+    key: /org/mate/desktop/background/picture-filename
+    value: "'/usr/share/backgrounds/mate/desktop/Ubuntu-Mate-Dark-no-logo.png'"
+- name: Background 3
+  dconf:
+    key: /org/mate/desktop/background/picture-options
+    value: "'zoom'"
+- name: Background 4
+  dconf:
+    key: /org/mate/desktop/background/primary-color
+    value: "'rgb(88,145,188)'"
+- name: Background 5
+  dconf:
+    key: /org/mate/desktop/background/secondary-color
+    value: "'rgb(60,143,37)'"
