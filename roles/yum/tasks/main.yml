@@ -44,3 +44,4 @@
       - oathtool
       - net-tools
       - pv
+      - libxkbcommon-x11  # Dependancy for Zoom

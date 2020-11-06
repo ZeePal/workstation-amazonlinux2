@@ -1,3 +1,15 @@
+- name: Source aliases
+  blockinfile:
+    path: "/home/{{ primary_username }}/.bashrc"
+    marker: "# {mark} Source aliases"
+    create: yes
+    owner: "{{ primary_username }}"
+    group: "{{ primary_username }}"
+    mode: u=rw,go=r
+    block: |
+      . ~/.bash_aliases
+
+
 - include: git.yml
 - include: misc.yml
 
