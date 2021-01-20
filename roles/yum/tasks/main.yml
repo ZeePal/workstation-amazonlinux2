@@ -45,3 +45,4 @@
       - net-tools
       - pv
       - libxkbcommon-x11  # Dependancy for Zoom
+      - shadow-utils46-newxidmap

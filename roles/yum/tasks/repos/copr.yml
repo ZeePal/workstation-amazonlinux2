@@ -2,3 +2,8 @@
   yum:
     state: present
     name: yum-plugin-copr
+
+- name: Enable shadow-utils-newxidmap repo
+  command: "yes|yum copr enable vbatts/shadow-utils-newxidmap"
+  args:
+    creates: /etc/yum.repos.d/_copr_vbatts-shadow-utils-newxidmap.repo
